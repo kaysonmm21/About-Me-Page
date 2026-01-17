@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.7;
+    color: #1a1a1a;
+    background-color: #ffffff;
+}
+
+/* Hero Section */
+.hero {
+    padding: 80px 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #0a0a0a;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+}
+
+.subheadline {
+    font-size: 1.25rem;
+    color: #4a4a4a;
+    font-weight: 400;
+}
+
+.hero-image {
+    width: 320px;
+    height: 400px;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Image Placeholders */
+.image-placeholder {
+    background-color: #f0f0f0;
+    border: 2px dashed #c0c0c0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/* About Section */
+.about {
+    padding: 80px 24px;
+    background-color: #fafafa;
+}
+
+.about-content {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.about-content h2 {
+    font-size: 1.875rem;
+    font-weight: 600;
+    color: #0a0a0a;
+    margin-bottom: 32px;
+    letter-spacing: -0.01em;
+}
+
+.about-content p {
+    font-size: 1.0625rem;
+    color: #2a2a2a;
+    margin-bottom: 24px;
+}
+
+.about-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Photos Section */
+.photos {
+    padding: 80px 24px;
+}
+
+.photos-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.photos-content h2 {
+    font-size: 1.875rem;
+    font-weight: 600;
+    color: #0a0a0a;
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+}
+
+.photos-intro {
+    font-size: 1.0625rem;
+    color: #4a4a4a;
+    margin-bottom: 40px;
+}
+
+.photos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.photo-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.photo-item .image-placeholder {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    margin-bottom: 12px;
+}
+
+.photo-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 12px;
+    border-radius: 4px;
+}
+
+.photo-caption {
+    font-size: 0.875rem;
+    color: #5a5a5a;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-image {
+        width: 260px;
+        height: 320px;
+    }
+
+    .photos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 1.75rem;
+    }
+
+    .subheadline {
+        font-size: 1.125rem;
+    }
+
+    .about {
+        padding: 60px 20px;
+    }
+
+    .about-content h2,
+    .photos-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+    }
+
+    .photos {
+        padding: 60px 20px;
+    }
+
+    .photos-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
